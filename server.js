@@ -26,6 +26,7 @@ io.on('connection', socket => {
 
 app.use('/', express.static(__dirname + '/public/'));
 
-server.listen(3000, () => {
-    console.log("Started on http://localhost:3000");
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+    console.log(`Serving on port ${port}`);
 })
