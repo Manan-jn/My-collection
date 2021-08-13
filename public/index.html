@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8b2f8c1523.js" crossorigin="anonymous"></script>
+    <title>Real Time Chat Application</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<style>
+    .logo {
+        display: block;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+    }
+
+    body {
+        height: 100vh;
+        background-image: linear-gradient(rgb(255, 255, 255), rgba(223, 98, 223, 0.473));
+    }
+
+    #send-container {
+        display: block;
+        margin: auto;
+        text-align: center;
+        max-width: 985px;
+        width: 100%;
+    }
+
+    #messageInp {
+        width: 92%;
+        border: 2px solid black;
+        border-radius: 6px;
+        height: 34px;
+    }
+
+    .btn {
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 6px;
+        height: 34px;
+    }
+
+    .container {
+        max-width: 955px;
+        background-color: rgb(229, 255, 0);
+        border: 2px solid black;
+        margin: auto;
+        height: 60vh;
+        padding: 33px;
+        overflow-y: auto;
+        margin-bottom: 23px;
+    }
+
+    .message {
+        background-color: grey;
+        width: 24%;
+        padding: 10px;
+        margin: 17px 12px;
+        border: 2px solid black;
+        border-radius: 10px;
+
+    }
+
+    .left {
+        float: left;
+        clear: both;
+    }
+
+    .right {
+        float: right;
+        clear: both;
+    }
+</style>
+
+<body>
+    <nav>
+        <i class="fas fa-comments logo"></i>
+    </nav>
+    <div class="container">
+        <!-- <div class="message left"></div>
+        <div class="message right"></div> -->
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>
