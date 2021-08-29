@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="/public/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Canvas</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 30px;
+            overflow: hidden;
+            background: gray;
+        }
+
+        canvas {
+            box-shadow: -3px 2px 9px 6px black;
+            cursor: pointer;
+        }
+
+        .tools {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-top: 15px;
+        }
+
+        .tools .color-field {
+            height: 40px;
+            width: 40px;
+            min-height: 40px;
+            min-width: 40px;
+            cursor: pointer;
+            display: inline-block;
+            cursor: pointer;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid white;
+            align-self: center;
+            margin: 0 10px;
+        }
+
+        .tools .button {
+            align-self: center;
+            width: 100px;
+            height: 40px;
+            border: 2px solid white;
+            cursor: pointer;
+            color: white;
+            background: brown;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .color-picker {
+            align-self: center;
+            margin: 0 10px;
+            height: 50px;
+        }
+
+        .pen-range {
+            align-self: center;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onclick="undo_last()" type="button" class="button">Undo</button>
+            <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+
+            <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background:blue"></div>
+            <div onclick="change_color(this)" class="color-field" style="background:green"></div>
+            <div onclick="change_color(this)" class="color-field" style="background:yellow"></div>
+
+            <input oninput="draw_color=this.value" type="color" class="color-picker">
+            <input oninput="draw_width=this.value" type="range" min="1" max="100" class="pen-range">
+
+        </div>
+    </div>
+
+    <script src="/public/index.js"></script>
+</body>
+
+</html>
