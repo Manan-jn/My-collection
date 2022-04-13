@@ -1,6 +1,10 @@
 # Real Time Drawing Board
 ## This is a real time drawing canvas board made using [socket.io](https://socket.io/)
 ## Can be used to share drawings in real time and people will be able to draw also on the canvas :) 
+
+  ## 🧪 Deployment
+https://whiteboard-iosocket.herokuapp.com/
+
 ## Setup:
 #### 1 .Clone the repository using the command : `git clone: https://github.com/Manan-jn/My-collection/tree/main/Drawing%20Board` <br/>
 #### 2. Run npm install in the cmd 
